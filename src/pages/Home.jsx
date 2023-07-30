@@ -1,7 +1,6 @@
 import { AuthenticatedTemplate } from "@azure/msal-react";
 import { useMsal } from "@azure/msal-react";
 import { Container } from "react-bootstrap";
-import { IdTokenData } from "../components/DataDisplay";
 import { SnapOne } from "../components/SnapOne";
 import { TodoForm } from "../components/TodoForm";
 
