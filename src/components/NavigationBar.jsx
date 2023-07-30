@@ -44,11 +44,11 @@ export const NavigationBar = () => {
         <>
             <Navbar bg="primary" variant="dark" className="navbarStyle">
                 <a className="navbar-brand" href="/">
-                    ZenTask
+                    Zen Task manager🧘‍♂️
                 </a>
                 <AuthenticatedTemplate>
                     <Nav.Link className="navbarButton" href="/todolist">
-                        Todolist
+                        All Tasks
                     </Nav.Link>
                     <div className="collapse navbar-collapse justify-content-end">
                         <Button variant="info" onClick={handleProfileEdit} className="profileButton">
@@ -58,11 +58,9 @@ export const NavigationBar = () => {
                         <DropdownButton
                             variant="warning"
                             drop="start"
-                            title={activeAccount && activeAccount.username ? activeAccount.username : 'Unknown'}
+                            title={activeAccount && activeAccount.name ? activeAccount.name : 'Unknown'}
                         >
-                            <Dropdown.Item as="button" onClick={handleLogoutPopup}>
-                                Sign out using Popup
-                            </Dropdown.Item>
+                          
                             <Dropdown.Item as="button" onClick={handleLogoutRedirect}>
                                 Sign out using Redirect
                             </Dropdown.Item>
@@ -72,9 +70,7 @@ export const NavigationBar = () => {
                 <UnauthenticatedTemplate>
                     <div className="collapse navbar-collapse justify-content-end">
                         <DropdownButton variant="secondary" className="ml-auto" drop="start" title="Sign In">
-                            <Dropdown.Item as="button" onClick={handleLoginPopup}>
-                                Sign in using Popup
-                            </Dropdown.Item>
+                            
                             <Dropdown.Item as="button" onClick={handleLoginRedirect}>
                                 Sign in using Redirect
                             </Dropdown.Item>

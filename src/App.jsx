@@ -1,17 +1,15 @@
 import { useEffect } from 'react';
-
-import {  Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { MsalProvider, useMsal } from '@azure/msal-react';
 import { EventType } from '@azure/msal-browser';
 
 import { PageLayout } from './components/PageLayout';
 import { TodoList } from './pages/TodoList';
-import { Home } from './pages/Hello';
+import { Home } from './pages/Home';
 import { b2cPolicies, protectedResources } from './authConfig';
 import { compareIssuingPolicy } from './utils/claimUtils';
 
 import './styles/App.css';
-import { Router, Switch } from 'react-router-dom/cjs/react-router-dom.min';
 
 const Pages = () => {
     /**
@@ -94,12 +92,10 @@ const Pages = () => {
     }, [instance]);
 
     return (
-        <Router>
-            <Switch>
-            
+        <Routes>
+            <Route path="/todolist" element={<TodoList />} />
             <Route path="/" element={<Home />} />
-            </Switch>
-        </Router>
+        </Routes>
     );
 };
 
