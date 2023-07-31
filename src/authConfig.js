@@ -41,7 +41,7 @@ export const msalConfig = {
         clientId: '9a794cd4-bc05-4bc2-8fe7-4da61e2b5456', // This is the ONLY mandatory field that you need to supply.
         authority: b2cPolicies.authorities.signUpSignIn.authority, // Choose SUSI as your default authority.
         knownAuthorities: [b2cPolicies.authorityDomain], // Mark your B2C tenant's domain as trusted.
-        redirectUri: '/', // You must register this URI on Azure Portal/App Registration. Defaults to window.location.origin
+        redirectUri: 'https://react-client-app2.azurewebsites.net/', // You must register this URI on Azure Portal/App Registration. Defaults to window.location.origin
         postLogoutRedirectUri: '/', // Indicates the page to navigate after logout.
         navigateToLoginRequestUrl: false, // If "true", will navigate back to the original request location before processing the auth code response.
     },
