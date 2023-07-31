@@ -6,7 +6,7 @@ export const SnapOne = (props) => {
 
     const fetchData =() => {
         
-        fetch("http://localhost:5000/getTasksAll")
+        fetch("https://flasky-server.azurewebsites.net:5000/getTasksAll")
         .then((response) => response.json())
         .then((data) => {
             setUser(data.message);

@@ -15,7 +15,7 @@ const TodoListContent = () => {
 
     const fetchData =() => {
         
-        fetch("http://localhost:5000/getTasksAll")
+        fetch("https://react-client-app2.azurewebsites.net:5000/getTasksAll")
         .then((response) => response.json())
         .then((data) => {
             setTodolistdata(data);
@@ -45,7 +45,7 @@ const TodoListContent = () => {
         const post_data = {
             id: cid
         }
-        postData("http://localhost:5000/deleteTask", { post_data }).then((data) => {
+        postData("https://flasky-server.azurewebsites.net:5000/deleteTask", { post_data }).then((data) => {
             console.log(data); // JSON data parsed by `data.json()` call
             fetchData();
         });
