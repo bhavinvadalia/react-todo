@@ -49,7 +49,7 @@ export const TodoForm = () => {
             taskcolor: values.taskcolor,
             taskdesc: values.taskdesc
         }
-        postData("https://flasky-server.azurewebsites.net:5000/addTasks", { post_data }).then((data) => {
+        postData("https://flasky-server.azurewebsites.net/addTasks", { post_data }).then((data) => {
             console.log(data); // JSON data parsed by `data.json()` call
         });
         
